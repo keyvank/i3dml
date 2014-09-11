@@ -8,8 +8,8 @@ API for making connection to the graphic device. So in order
 to compile and run the project on your platform, you need 
 these components to be installed:
 
-	* Microsoft .Net Framework 4.0 (Or higher)
-	* Microsoft XNA Game Studio 4.0 (Or higher)
+* Microsoft .Net Framework 4.0 (Or higher)
+* Microsoft XNA Game Studio 4.0 (Or higher)
 
 ## WHAT IS i3DML? 
 
@@ -27,10 +27,10 @@ you can design your World with a set of tags and attributes.
 i3DML suggests you features that makes 3D modelling much easier 
 than before:
 
-	•	It can be transferred over the network
-	•	It has a very flexible positioning System
-	•	It uses JavaScript as the logical part of applications
-	•	It is independent from other technologies
+* It can be transferred over the network
+* It has a very flexible positioning System
+* It uses JavaScript as the logical part of applications
+* It is independent from other technologies
 	
 i3DML is an XML-based technology, which means you can design 
 and draw your World with a set of tags and attributes, and of 
