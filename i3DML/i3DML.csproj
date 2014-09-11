@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DCA49BE0-17AF-4DD6-9900-0B73F3E26D4E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>i3DML</RootNamespace>
+    <AssemblyName>i3DML</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Jint, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2e92ba9c8d81157f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Jint.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configurations.cs" />
+    <Compile Include="ObjectModel\Abstract\Drawable.cs" />
+    <Compile Include="ObjectModel\Abstract\PlaceBase.cs" />
+    <Compile Include="ObjectModel\Abstract\WorldElement.cs" />
+    <Compile Include="ObjectModel\Components\Collections\Ii3DMLCollection.cs" />
+    <Compile Include="ObjectModel\Components\Collections\Ii3DMLDictionary.cs" />
+    <Compile Include="ObjectModel\Components\Ii3DMLInitializable.cs" />
+    <Compile Include="ObjectModel\Components\Working with Attributes\Attributes.cs" />
+    <Compile Include="ObjectModel\Components\Working with Types\i3DMLTypeProvider.cs" />
+    <Compile Include="ObjectModel\Containers\Place.cs" />
+    <Compile Include="ObjectModel\Containers\World.cs" />
+    <Compile Include="ObjectModel\Lighting\Light.cs" />
+    <Compile Include="ObjectModel\Lighting\PointLight.cs" />
+    <Compile Include="ObjectModel\Math\MathOperations.cs" />
+    <Compile Include="ObjectModel\Math\Tools.cs" />
+    <Compile Include="ObjectModel\Meshes\IndexedMesh.cs" />
+    <Compile Include="ObjectModel\Meshes\Mesh.cs" />
+    <Compile Include="ObjectModel\Meshes\Model.cs" />
+    <Compile Include="ObjectModel\Meshes\PrimitiveMesh.cs" />
+    <Compile Include="ObjectModel\Meshes\Shape.cs" />
+    <Compile Include="ObjectModel\Meshes\Shapes\Cone.cs" />
+    <Compile Include="ObjectModel\Meshes\Shapes\Cube.cs" />
+    <Compile Include="ObjectModel\Meshes\Shapes\Cylinder.cs" />
+    <Compile Include="ObjectModel\Meshes\Shapes\Sphere.cs" />
+    <Compile Include="ObjectModel\Meshes\Shapes\Torus.cs" />
+    <Compile Include="ObjectModel\Meshes\Surface.cs" />
+    <Compile Include="ObjectModel\Meshes\Surfaces\Disk.cs" />
+    <Compile Include="ObjectModel\Meshes\Surfaces\HeightMap.cs" />
+    <Compile Include="ObjectModel\Meshes\Surfaces\HeightMapBase.cs" />
+    <Compile Include="ObjectModel\Meshes\Surfaces\Plane.cs" />
+    <Compile Include="ObjectModel\Meshes\Surfaces\Plot.cs" />
+    <Compile Include="ObjectModel\Primitives\Color.cs" />
+    <Compile Include="ObjectModel\Primitives\Matrix.cs" />
+    <Compile Include="ObjectModel\Primitives\Point.cs" />
+    <Compile Include="ObjectModel\Primitives\Point2D.cs" />
+    <Compile Include="ObjectModel\Primitives\Ratio.cs" />
+    <Compile Include="ObjectModel\Primitives\Ratio2D.cs" />
+    <Compile Include="ObjectModel\Primitives\Rotation.cs" />
+    <Compile Include="ObjectModel\Primitives\Size.cs" />
+    <Compile Include="ObjectModel\Primitives\Size2D.cs" />
+    <Compile Include="ObjectModel\Primitives\Vertex.cs" />
+    <Compile Include="ObjectModel\Resources\Ii3DMLUrlManager.cs" />
+    <Compile Include="ObjectModel\Resources\Resource.cs" />
+    <Compile Include="ObjectModel\Resources\ResourceManager.cs" />
+    <Compile Include="ObjectModel\Scripts\ScriptManager.cs" />
+    <Compile Include="Parser\Extensions.cs" />
+    <Compile Include="Parser\i3DMLConverter.cs" />
+    <Compile Include="Parser\i3DMLNestedAttribute.cs" />
+    <Compile Include="Parser\i3DMLReader.cs" />
+    <Compile Include="Parser\i3DMLReaderBase.cs" />
+    <Compile Include="Parser\i3DMLReaderExceptions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
