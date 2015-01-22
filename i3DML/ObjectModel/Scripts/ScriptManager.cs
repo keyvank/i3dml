@@ -97,6 +97,7 @@ namespace i3DML.ObjectModel
             Drawable = drawable;
             JSEngine = new JintEngine();
             JSEngine.DisableSecurity();
+            JSEngine.SetParameter("tools", new ScriptingTools());
             JSEngine.SetFunction("log", new Action<object>(o => Console.WriteLine(o)));
             JSEngine.SetFunction("sleep", new Action<double>(i => System.Threading.Thread.Sleep((int)i)));
             JSEngine.SetFunction("doInBackground", new Action<Jint.Native.JsFunction>(f => System.Threading.Tasks.Task.Factory.StartNew(() => { JSEngine.CallFunction(f); })));

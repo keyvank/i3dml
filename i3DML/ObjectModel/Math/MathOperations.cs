@@ -6,12 +6,14 @@
  **/
 
 using System;
+using i3DML.ObjectModel.Components;
 
 namespace i3DML.ObjectModel
 {
     /// <summary>
     /// 3D Geometrical math operations.
     /// </summary>
+    [i3DMLReaderIgnore]
     public static class MathOperations
     {
 

@@ -58,7 +58,6 @@
     <Compile Include="ObjectModel\Lighting\Light.cs" />
     <Compile Include="ObjectModel\Lighting\PointLight.cs" />
     <Compile Include="ObjectModel\Math\MathOperations.cs" />
-    <Compile Include="ObjectModel\Math\Tools.cs" />
     <Compile Include="ObjectModel\Meshes\IndexedMesh.cs" />
     <Compile Include="ObjectModel\Meshes\Mesh.cs" />
     <Compile Include="ObjectModel\Meshes\Model.cs" />
@@ -89,6 +88,7 @@
     <Compile Include="ObjectModel\Resources\Resource.cs" />
     <Compile Include="ObjectModel\Resources\ResourceManager.cs" />
     <Compile Include="ObjectModel\Scripts\ScriptManager.cs" />
+    <Compile Include="ObjectModel\Scripts\ScriptingTools.cs" />
     <Compile Include="Parser\Extensions.cs" />
     <Compile Include="Parser\i3DMLConverter.cs" />
     <Compile Include="Parser\i3DMLNestedAttribute.cs" />
