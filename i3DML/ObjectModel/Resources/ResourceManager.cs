@@ -104,6 +104,7 @@ namespace i3DML.ObjectModel
                             Resources[res.ResourceType][resource.Url] = converted;
                             resource.Data = converted;
                             Downloaded(resource);
+                            break;
                         }
                         catch { System.Threading.Thread.Sleep(Timeout); }
                     }
